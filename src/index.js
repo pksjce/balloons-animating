@@ -2,7 +2,7 @@ import { TweenMax } from "gsap";
 
 const X = 200;
 const Y = 200;
-const speed = () => Math.random() + 4;
+const speed = () => Math.random() + 3;
 const delay = () => Math.random();
 
 const createBalloon = ({ id, fillColor }) => {
@@ -20,7 +20,7 @@ const createBalloon = ({ id, fillColor }) => {
     <path id='balloon-bottom' fill='${fillColor}' d="M${X + 3} ${Y -
     2} h-5 l2 -2 l2 0 " stroke='${fillColor}' />
     <path id='thread' d="M${X + 7} ${Y -
-    4} h-4 q-20,2,1,45 q15,30,-3,49 q-21,22,4,65" fill='none' stroke='purple'/>
+    4} h-4 q-20,2,1,45 q15,30,-3,49 q-21,22,4,65" fill='none' stroke='grey'/>
   </g>
   `;
 };
@@ -56,7 +56,7 @@ const balloonhtml = balloons.map(createBalloon).join("");
 
 document.getElementById("app").innerHTML = `
 
-<svg viewBox="-10 -10 500 500">
+<svg viewBox="-10 -10 800 800">
     ${balloonhtml}
 </svg>
 `;

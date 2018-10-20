@@ -10860,7 +10860,7 @@ var X = 200;
 var Y = 200;
 
 var speed = function speed() {
-  return Math.random() + 4;
+  return Math.random() + 3;
 };
 
 var delay = function delay() {
@@ -10870,7 +10870,7 @@ var delay = function delay() {
 var createBalloon = function createBalloon(_ref) {
   var id = _ref.id,
       fillColor = _ref.fillColor;
-  return "\n  <g id='".concat(id, "'>\n  <defs>\n  <radialGradient id=\"RadialGradient").concat(id, "\" cx=\"0.60\" cy=\"0.38\" r=\"0.35\">\n    <stop offset=\"0%\" stop-color=\"white\"/>\n    <stop offset=\"100%\" stop-color=\"").concat(fillColor, "\"/>\n  </radialGradient>\n</defs>\n    <path id='balloon' fill='url(#RadialGradient").concat(id, ")' stroke='").concat(fillColor, "' d=\"M").concat(X - 1, " ").concat(Y - 4, " c-85 -100 85 -100 2 0\"/>\n\n    <path id='balloon-bottom' fill='").concat(fillColor, "' d=\"M").concat(X + 3, " ").concat(Y - 2, " h-5 l2 -2 l2 0 \" stroke='").concat(fillColor, "' />\n    <path id='thread' d=\"M").concat(X + 7, " ").concat(Y - 4, " h-4 q-20,2,1,45 q15,30,-3,49 q-21,22,4,65\" fill='none' stroke='purple'/>\n  </g>\n  ");
+  return "\n  <g id='".concat(id, "'>\n  <defs>\n  <radialGradient id=\"RadialGradient").concat(id, "\" cx=\"0.60\" cy=\"0.38\" r=\"0.35\">\n    <stop offset=\"0%\" stop-color=\"white\"/>\n    <stop offset=\"100%\" stop-color=\"").concat(fillColor, "\"/>\n  </radialGradient>\n</defs>\n    <path id='balloon' fill='url(#RadialGradient").concat(id, ")' stroke='").concat(fillColor, "' d=\"M").concat(X - 1, " ").concat(Y - 4, " c-85 -100 85 -100 2 0\"/>\n\n    <path id='balloon-bottom' fill='").concat(fillColor, "' d=\"M").concat(X + 3, " ").concat(Y - 2, " h-5 l2 -2 l2 0 \" stroke='").concat(fillColor, "' />\n    <path id='thread' d=\"M").concat(X + 7, " ").concat(Y - 4, " h-4 q-20,2,1,45 q15,30,-3,49 q-21,22,4,65\" fill='none' stroke='grey'/>\n  </g>\n  ");
 };
 
 var balloons = [{
@@ -10893,7 +10893,7 @@ var balloons = [{
   fillColor: "lightblue"
 }];
 var balloonhtml = balloons.map(createBalloon).join("");
-document.getElementById("app").innerHTML = "\n\n<svg viewBox=\"-10 -10 500 500\">\n    ".concat(balloonhtml, "\n</svg>\n");
+document.getElementById("app").innerHTML = "\n\n<svg viewBox=\"-10 -10 800 800\">\n    ".concat(balloonhtml, "\n</svg>\n");
 
 _gsap.TweenMax.fromTo("#balloon1", speed(), {
   css: {
@@ -10993,7 +10993,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50206" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57930" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
